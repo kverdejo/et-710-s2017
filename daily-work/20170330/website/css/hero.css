@@ -1,6 +1,6 @@
 container {
   position:static;
-  margin-right:auto;
+  align-content: center;
   height: 500px; }
 
 caption {
