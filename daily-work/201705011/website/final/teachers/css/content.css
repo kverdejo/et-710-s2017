@@ -1,94 +1,32 @@
 
-.container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (1fr)[2];
-      grid-template-rows: repeat(2, 1fr);
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  width: 100vw;
-  height: 100vh;
+.card-reveal-wrapper {
+  position: relative;
 }
 
-@media screen and (max-width: 60em) {
-  .container {
-    -ms-grid-rows: (1fr)[4];
-        grid-template-rows: repeat(4, 1fr);
-  }
+.card-reveal-wrapper .open-button,
+.card-reveal-wrapper .close-button {
+  cursor: pointer;
+  float: right;
+  font-size: 0.875rem;
+  padding-left: 0.5rem;
+  text-align: right;
+  width: 100%;
 }
 
-.grid-1 {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 3;
-  -ms-grid-row: 1;
-      grid-row: 1;
+.card-reveal-wrapper .card-reveal {
+  background: #fefefe;
+  bottom: 0;
+  display: block;
+  left: 0;
+  overflow: hidden;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  transition: top 0.6s ease-in-out;
 }
 
-@media screen and (max-width: 60em) {
-  .grid-1 {
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 5;
-    -ms-grid-row: 1;
-        grid-row: 1;
-  }
-}
-
-.grid-2 {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  grid-column-end: 5;
-  -ms-grid-row: 1;
-      grid-row: 1;
-}
-
-@media screen and (max-width: 60em) {
-  .grid-2 {
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 5;
-    -ms-grid-row: 2;
-        grid-row: 2;
-  }
-}
-
-.grid-3 {
-  -ms-grid-column: 1;
-      grid-column-start: 1;
-  grid-column-end: 3;
-  -ms-grid-row: 2;
-      grid-row: 2;
-}
-
-@media screen and (max-width: 60em) {
-  .grid-3 {
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 5;
-    -ms-grid-row: 3;
-        grid-row: 3;
-  }
-}
-
-.grid-4 {
-  -ms-grid-column: 3;
-      grid-column-start: 3;
-  grid-column-end: 5;
-  -ms-grid-row: 2;
-      grid-row: 2;
-}
-
-@media screen and (max-width: 60em) {
-  .grid-4 {
-    -ms-grid-column: 1;
-        grid-column-start: 1;
-    grid-column-end: 5;
-    -ms-grid-row: 4;
-        grid-row: 4;
-  }
-}
-
-.callout {
-  margin: 0;
+.card-reveal-wrapper .card-reveal.open {
+  top: 0;
+  z-index: 1;
 }

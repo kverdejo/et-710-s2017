@@ -1,48 +1,21 @@
 
-.masonry-css {
-  -webkit-column-count: 1;
-     -moz-column-count: 1;
-          column-count: 1;
-  -webkit-column-gap: 1rem;
-     -moz-column-gap: 1rem;
-          column-gap: 1rem;
+.hero-section {
+  background: url("https://echalk-slate-prod.s3.amazonaws.com/private/schools/85/resources/0a2e442e-3a8b-4555-b928-e049eda168e0?AWSAccessKeyId=AKIAIZQPKIVDQVS7TUJA&Expires=1790877582&response-content-disposition=attachment%3Bfilename%3D%22DSC_6769.jpg%22&response-content-type=image%2Fjpeg&Signature=CQbKGWYOsf30pEwg6T%2BIrC62S%2BI%3D") 50% no-repeat;
+  background-size: cover;
+  height:150vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
-@media screen and (min-width: 25em) {
-  .masonry-css {
-    -webkit-column-count: 2;
-       -moz-column-count: 2;
-            column-count: 2;
-  }
-}
-
-@media screen and (min-width: 37.5em) {
-  .masonry-css {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
-  }
-}
-
-@media screen and (min-width: 50em) {
-  .masonry-css {
-    -webkit-column-count: 4;
-       -moz-column-count: 4;
-            column-count: 4;
-  }
-}
-
-@media screen and (min-width: 68.75em) {
-  .masonry-css {
-    -webkit-column-count: 5;
-       -moz-column-count: 5;
-            column-count: 5;
-  }
-}
-
-.masonry-css-item {
-  -webkit-column-break-inside: avoid;
-     page-break-inside: avoid;
-          break-inside: avoid;
-  margin-bottom: 1rem;
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
 }
