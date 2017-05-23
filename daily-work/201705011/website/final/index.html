@@ -31,6 +31,44 @@
   </ul>
 </header>
     <!--*End Nav-->
+    <!--*Begin Angular 1-->
+  </head>
+  <body>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
+  </body>
+  </html>
+
+  <!--*End Angular 1-->
+
+  <!--*Begin Angular 2-->
+</head>
+<body>
+  <h2>Todo</h2>
+  <div ng-controller="TodoListController as todoList">
+    <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
+    [ <a href="" ng-click="todoList.archive()">archive</a> ]
+    <ul class="unstyled">
+      <li ng-repeat="todo in todoList.todos">
+        <label class="checkbox">
+          <input type="checkbox" ng-model="todo.done">
+          <span class="done-{{todo.done}}">{{todo.text}}</span>
+        </label>
+      </li>
+    </ul>
+    <form ng-submit="todoList.addTodo()">
+      <input type="text" ng-model="todoList.todoText"  size="30"
+      placeholder="add new todo here">
+      <input class="btn-primary" type="submit" value="add">
+    </form>
+  </div>
+</body>
+</html>
+<!--*End Angular 2-->
 
     <!--*Begin Hero-->
     <div class="row collapse expanded">
@@ -62,45 +100,6 @@
 	</div>
 
     <!--*End Hero-->
-
-    <!--*Begin Angular 1-->
-  </head>
-  <body>
-    <div>
-      <label>Name:</label>
-      <input type="text" ng-model="yourName" placeholder="Enter a name here">
-      <hr>
-      <h1>Hello {{yourName}}!</h1>
-    </div>
-  </body>
-  </html>
-
-<!--*End Angular 1-->
-
-<!--*Begin Angular 2-->
-</head>
-<body>
-  <h2>Todo</h2>
-  <div ng-controller="TodoListController as todoList">
-    <span>{{todoList.remaining()}} of {{todoList.todos.length}} remaining</span>
-    [ <a href="" ng-click="todoList.archive()">archive</a> ]
-    <ul class="unstyled">
-      <li ng-repeat="todo in todoList.todos">
-        <label class="checkbox">
-          <input type="checkbox" ng-model="todo.done">
-          <span class="done-{{todo.done}}">{{todo.text}}</span>
-        </label>
-      </li>
-    </ul>
-    <form ng-submit="todoList.addTodo()">
-      <input type="text" ng-model="todoList.todoText"  size="30"
-           placeholder="add new todo here">
-           <input class="btn-primary" type="submit" value="add">
-         </form>
-       </div>
-     </body>
-     </html>
-<!--*End Angular 2-->
 
     <!--*Begin Content-->
     <div class="row">
